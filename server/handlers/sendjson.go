@@ -9,7 +9,7 @@ import (
 
 // will take a url and file and will send as a json
 
-func Sendjson(url string, file string) ([]byte, error) {
+func SendJson(url string, file string) ([]byte, error) {
 	data, err := os.ReadFile(file)
 	if err != nil {
 		return nil, err

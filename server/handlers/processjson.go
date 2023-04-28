@@ -9,7 +9,7 @@ import (
 	"github.com/labstack/echo"
 )
 
-func Processjson(c echo.Context) error {
+func ProcessJson(c echo.Context) error {
 	incomingData := new(models.IncomingData)
 	if err := json.NewDecoder(c.Request().Body).Decode(incomingData); err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, "invalid json format")

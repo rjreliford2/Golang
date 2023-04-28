@@ -30,7 +30,7 @@ to quickly create a Cobra application.`,
 		endpoint, _ := cmd.Flags().GetString("endpoint")
 		file, _ := cmd.Flags().GetString("file")
 		url := baseurl + ":" + port + endpoint
-		responsedata, err := handlers.Sendjson(url, file)
+		responsedata, err := handlers.SendJson(url, file)
 		if err != nil {
 			fmt.Println(err)
 			return
