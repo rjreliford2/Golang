@@ -5,7 +5,7 @@ package cmd
 
 import (
 	"fmt"
-	"t2/t1/cmd/logic"
+	"t1/cmd/logic"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"

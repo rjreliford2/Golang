@@ -6,7 +6,7 @@ package cmd
 import (
 	"bytes"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 
 	"github.com/spf13/cobra"
@@ -43,7 +43,7 @@ and usage of using your command. For example:`,
 		}
 		defer resp.Body.Close()
 		//Reads the response and prints it to the console
-		body, err := ioutil.ReadAll(resp.Body)
+		body, err := io.ReadAll(resp.Body)
 		if err != nil {
 			fmt.Println("Error reading API response:", err)
 			return
