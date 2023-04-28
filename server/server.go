@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"server/handlers"
 	"time"
 
 	"github.com/labstack/echo"
@@ -16,7 +17,9 @@ func main() {
 		return c.String(http.StatusOK, "Hello, World!  ererer")
 	})
 	e.GET("/GetData22/:username/:password", GetData22)
+	e.POST("/processjson", handlers.Processjson)
 	e.Logger.Fatal(e.Start(":1323"))
+
 }
 
 // JSON response

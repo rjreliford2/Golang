@@ -86,7 +86,7 @@ func init() {
 }*/
 
 func z02(url string, port string) (string, string) {
-	//res := fmt.Sprintf() url + port
-	res := "yada"
+	res := fmt.Sprintf(url + port)
+	//res := "yada"
 	return res, "Hi there"
 }
