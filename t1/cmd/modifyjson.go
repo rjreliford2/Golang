@@ -62,12 +62,12 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// modifyjsonCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-	x002Cmd.Flags().StringP("endpoint", "l", "end", "URL endpoint")
-	x002Cmd.Flags().StringP("port", "p", "1323", "HTTP port number")
-	x002Cmd.Flags().StringP("baseurl", "u", "localhost", "HTTP url")
-	x002Cmd.Flags().StringP("file", "f", "filepath", "file path of the json")
-	viper.BindPFlag("baseurl", x002Cmd.Flags().Lookup("baseurl"))
-	viper.BindPFlag("port", x002Cmd.Flags().Lookup("port"))
-	viper.BindPFlag("endpoint", x002Cmd.Flags().Lookup("endpoint"))
-	viper.BindPFlag("file", x002Cmd.Flags().Lookup("file"))
+	modifyjsonCmd.Flags().StringP("endpoint", "l", "end", "URL endpoint")
+	modifyjsonCmd.Flags().StringP("port", "p", "1323", "HTTP port number")
+	modifyjsonCmd.Flags().StringP("baseurl", "u", "localhost", "HTTP url")
+	modifyjsonCmd.Flags().StringP("file", "f", "filepath", "file path of the json")
+	viper.BindPFlag("baseurl", modifyjsonCmd.Flags().Lookup("baseurl"))
+	viper.BindPFlag("port", modifyjsonCmd.Flags().Lookup("port"))
+	viper.BindPFlag("endpoint", modifyjsonCmd.Flags().Lookup("endpoint"))
+	viper.BindPFlag("file", modifyjsonCmd.Flags().Lookup("file"))
 }
